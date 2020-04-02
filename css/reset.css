@@ -1,0 +1,138 @@
+/* Vars */
+:root {
+    --background: #313540ff;
+    --background-accent: #191b21ff;
+    --text: white;
+    --accent: cornflowerblue;
+}
+
+/* Font Stuff */
+html {
+    font-size: 16px;
+}
+
+* {
+    font-size: 1rem;
+    font-weight: 200;
+    font-family: "IBM Plex Sans";
+}
+
+.hero {
+    font-size: 2.5rem;
+    color: var(--accent);
+    font-family: "IBM Plex Mono";
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2.25rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h4 {
+    font-size: 1.75rem;
+}
+
+h5 {
+    font-size: 1.50rem;
+}
+
+h6 {
+    font-size: 1.25rem;
+}
+
+small { 
+    font-size: 0.75rem;
+}
+
+code, kbd {
+    font-family: "IBM Plex Mono";
+}
+
+/* Flexibility & Display */
+.d-inline {
+    display: inline;
+}
+
+.d-inline-block {
+    display: inline-block;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.flex-direction-column {
+    flex-direction: column;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+/* Padding/Margin */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header, section, footer {
+    padding: 1rem;
+}
+
+/* Colors */
+body {
+    background: var(--background);
+}
+
+header, section, footer, nav {
+    background: var(--background-accent);
+}
+
+* {
+    color: var(--text);
+}
+
+/* Text align */
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+/* Media Queries */
+@media screen and (max-width: 800px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    html {
+        font-size: 10px;
+    }
+
+    h1.hero {
+        font-size: 2rem;
+    }
+}
