@@ -5,12 +5,11 @@ export class MainHeading extends HTMLElement {
         this.innerText = `${this.dataset.location}@obliviontech`;
     }
 
-    attributeChangedCallback(name: string, oldValue: string, newValue: string) {
+    attributeChangedCallback(name: string) {
         switch (name) {
             case "data-location": 
-                this.innerText = `${newValue}@obliviontech`;
-                break;
-                
+                this.innerText = `${this.dataset.location}@obliviontech`;
+                break; 
         }
     }
 

@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oblivion Tech</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200&family=IBM+Plex+Sans:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200&family=IBM+Plex+Sans:wght@200&display=swap">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -15,7 +16,11 @@
     <header is="main-heading" class="hero"></header>
 
     <div id="pages">
-        
+        <spa-view path="/">home!</spa-view>
+        <spa-view path="/about">about!</spa-view>
+        <spa-view path="/projects">projects!</spa-view>
+        <spa-view path="/contact">contact us!</spa-view>
+        <spa-view path="404">404!</spa-view>
     </div>
 
     <style id="componentStyles"></style>

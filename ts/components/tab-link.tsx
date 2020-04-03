@@ -32,7 +32,7 @@ export class TabLink extends HTMLElement {
         this.innerText = this.getAttribute("to");
 
         this.endpointPage = this.getAttribute("to").toLowerCase();
-        this.targetURL = this.endpointPage == "home" ? "/#" : `/#/${this.endpointPage}`;
+        this.targetURL = this.endpointPage == "home" ? "#" : `#/${this.endpointPage}`;
     }
 
     static define() {
