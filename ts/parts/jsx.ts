@@ -39,7 +39,13 @@ export function Fragment(ignoreProps, ...children: (string | Node)[]) {
 //#endregion
 
 //#region Add scoped component styles
-const componentStylesheet = document.querySelector<HTMLStyleElement>("#componentStyles"); 
+let componentStylesheet = document.querySelector<HTMLStyleElement>("#componentStyles"); 
+if (!componentStylesheet) {
+    // Create component stylesheet:
+    componentStylesheet = h("style", { id: "componentStyles" });
+    render(componentStylesheet, document.body);
+}
+
 export function addComponentStyles(styleString: string) {
     componentStylesheet.innerText += styleString
         .trim().replace(/\t/g, "").replace(/\n/g, "");

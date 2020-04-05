@@ -23,16 +23,14 @@ const Style = (`
 
 //#region Logic:
 export class TabLink extends HTMLElement {
-    endpointPage: string;
     targetURL: string;
 
 
     connectedCallback() {
         this.addEventListener("click", this.whenClicked);
         this.innerText = this.getAttribute("to");
-
-        this.endpointPage = this.getAttribute("to").toLowerCase();
-        this.targetURL = this.endpointPage == "home" ? "#" : `#/${this.endpointPage}`;
+        this.targetURL = this.getAttribute("to") == "home" ? 
+            "#" : `#/${this.getAttribute("to")}`;
     }
 
     static define() {
@@ -42,12 +40,18 @@ export class TabLink extends HTMLElement {
 
     whenClicked() {
         location.href = this.targetURL;
-
-        // Remove 'active' from any other tabs:
-        document.querySelectorAll<TabLink>("tab-link").forEach(tab => tab.removeAttribute("active"))
-
-        // Make current tab active:
-        this.setAttribute("active", "true")
     }
 }
 //#endregion
+
+export function unhighlightAll() {
+    document.querySelectorAll("tab-link")
+        .forEach(el => el.removeAttribute("active"));
+}
+
+export function highlight(tabName: string) {
+    if (!tabName.startsWith("/")) return 'bruh no /';
+    if (tabName.replace("/", "") == "") tabName = "home";
+    document.querySelector(`tab-link[to='${tabName.replace("/", "")}']`)
+        .setAttribute("active", "true");
+}

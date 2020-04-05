@@ -1,31 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="d-flex flex-direction-column">
 <head>
+    <!-- Meta stuff -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oblivion Tech</title>
 
+    <!-- CSS -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200&family=IBM+Plex+Sans:wght@200&display=swap">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.css">
 </head>
-<body>
+<body class="d-flex flex-direction-column">
+    <!-- Router Fetch Config -->
+    <view-config hidden>{
+        "/": "/pages/home.html",
+        "/about": "pages/about.html",
+        "/projects": "pages/projects.html",
+        "/contact": "pages/contact.html"
+    }</view-config>
+
+    <!-- Tab bar -->
     <nav is="side-bar" class="d-flex"></nav>
 
+    <!-- Header shows page title -->
     <header is="main-heading" class="hero"></header>
 
-    <div id="pages">
-        <spa-view path="/">home!</spa-view>
-        <spa-view path="/about">about!</spa-view>
-        <spa-view path="/projects">projects!</spa-view>
-        <spa-view path="/contact">contact us!</spa-view>
-        <spa-view path="404">404!</spa-view>
+    <!-- SPA routing container -->
+    <div id="pages" class="d-flex flex-direction-column flex-1">
+        <!-- Dynamically filled pages -->
+        <spa-view path="/"><h3>Homepage!</h3><small>Loading...</small></spa-view>
+        <spa-view path="/about"><h3>About!</h3><small>Loading...</small></spa-view>
+        <spa-view path="/projects"><h3>Projects!</h3><small>Loading...</small></spa-view>
+        <spa-view path="/contact"><h3>Contact Us!</h3><small>Loading...</small></spa-view>
+
+        <!-- 404 page -->
+        <spa-view path="404">
+            <div class="text-center padding" style="max-width: 30rem">
+                
+                <h1 class="hero giant">
+                    Shhhh! 
+                    <i class="fas fa-key hero" style="position: relative; bottom: 1rem;"></i>
+                </h1>
+                <hr><br>
+                <p class="lead">
+                    It appears, that you have somehow
+                    stumbled upon our secret headquarters.
+                    Forget you ever saw this page.
+                </p>
+                <br>
+                <a class="button" href="#">Go Home</a>
+            </div>
+        </spa-view>
     </div>
 
-    <style id="componentStyles"></style>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/2.4.3/custom-elements-es5-adapter.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/2.4.3/webcomponents-loader.js"></script>
-    <script type="module" src="js/app.js"></script>
+    <script type="module" src="/js/app.js"></script>
 </body>
 </html>

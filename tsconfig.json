@@ -9,7 +9,6 @@
         "jsxFactory": "h",
         "sourceMap": true,
         "watch": true,
-        "types": ["types.d.ts"]
     },
     "include": ["./ts/", "types.d.ts"],
     "exclude": ["node_modules"]

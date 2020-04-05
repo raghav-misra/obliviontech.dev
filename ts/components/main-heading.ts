@@ -1,16 +1,19 @@
+const onlyPageName = matchMedia("(max-width: 475px)");
+
 export class MainHeading extends HTMLElement {
     static get observedAttributes() { return ["data-location"]; }
 
     connectedCallback() {
         this.innerText = `${this.dataset.location}@obliviontech`;
+        onlyPageName.addEventListener("change", ({ matches }) => {
+            if (matches) this.innerText = this.dataset.location;
+            else this.innerText = `${this.dataset.location}@obliviontech`;
+        })
     }
 
-    attributeChangedCallback(name: string) {
-        switch (name) {
-            case "data-location": 
-                this.innerText = `${this.dataset.location}@obliviontech`;
-                break; 
-        }
+    attributeChangedCallback(name: string) { 
+        this.innerText = this.dataset.location;
+        onlyPageName.matches || (this.innerText += "@obliviontech");
     }
 
     static define() {

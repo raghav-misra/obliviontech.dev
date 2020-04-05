@@ -1,7 +1,7 @@
 import { h, render, Fragment, addComponentStyles } from '../parts/jsx';
 
 //#region Markup
-const links = ["Home", "About", "Projects", "Contact"];
+const links = ["home", "about", "projects", "contact"];
 const Markup = () => <Fragment>{ links.map((name) => <tab-link to={name}></tab-link>) }</Fragment>;
 //#endregion
 

@@ -9,12 +9,29 @@
 /* Font Stuff */
 html {
     font-size: 16px;
+    min-height: 100vh;
+}
+body {
+    min-height: 100vh;
 }
 
 * {
     font-size: 1rem;
-    font-weight: 200;
     font-family: "IBM Plex Sans";
+    overflow: hidden;
+}
+
+* {
+    font-weight: 200;
+}
+
+b, .bold {
+    font-weight: 500;
+}
+
+[class*="fa-"] {
+    font-family: "Font Awesome Free";
+    font-weight: 900;
 }
 
 .hero {
@@ -23,27 +40,31 @@ html {
     font-family: "IBM Plex Mono";
 }
 
-h1 {
+.hero.giant {
+    font-size: 5rem;
+}
+
+h1, .h1 {
     font-size: 2.5rem;
 }
 
-h2 {
+h2, .h2 {
     font-size: 2.25rem;
 }
 
-h3 {
+h3, .h3 {
     font-size: 2rem;
 }
 
-h4 {
+h4, .h4 {
     font-size: 1.75rem;
 }
 
-h5, .lead {
+h5, .h5 {
     font-size: 1.50rem;
 }
 
-h6 {
+h6, .h6, .lead {
     font-size: 1.25rem;
 }
 
@@ -86,6 +107,7 @@ code, kbd {
 
 /* Buttons and clicky things */
 button, .button {
+    text-decoration: none;
     padding: 0.25rem 0.5rem;
     margin: 0.25rem;
     font-size: 1.25rem;
@@ -105,8 +127,12 @@ button:hover, button:focus, .button:hover, .button:focus {
     margin: 0;
 }
 
-header, section, footer {
+header, section, footer, .padding {
     padding: 1rem;
+}
+
+spa-view {
+    padding: 1.5rem;
 }
 
 /* Colors */
@@ -137,17 +163,33 @@ header, section, footer, nav {
 
 /* Media Queries */
 @media screen and (max-width: 800px) {
-    html {
-        font-size: 12px;
+    .hero:not(.giant) {
+        font-size: 2rem;
+    }
+
+    tab-link {
+        font-size: 1.5rem;
     }
 }
 
 @media screen and (max-width: 475px) {
     html {
-        font-size: 10px;
+        font-size: 14px;
     }
 
-    h1.hero {
-        font-size: 2rem;
+    .hero:not(.giant) {
+        font-size: 1.75rem;
+    }
+
+    .hero.giant {
+        font-size: 4rem;
+    }
+
+    tab-link {
+        font-size: 1.25rem;
+    }
+
+    header { 
+        text-align: center;
     }
 }

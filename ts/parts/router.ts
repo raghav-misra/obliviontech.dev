@@ -1,3 +1,5 @@
+import * as TabLink from '../components/tab-link';
+
 export class Router {
     header: HTMLElement;
     currentPage: string = null;
@@ -5,7 +7,8 @@ export class Router {
 	constructor(header: HTMLElement) {
         this.header = header;
 		window.addEventListener("hashchange", this.onRedirect.bind(this));
-		this.onRedirect();
+        this.onRedirect();
+        fetchPages(JSON.parse(document.querySelector("view-config").textContent));
 	}
 
 	onRedirect() {
@@ -25,6 +28,9 @@ export class Router {
     }
     
     showPage(parsedHash) {
+        TabLink.unhighlightAll();
+        try { TabLink.highlight(parsedHash); }
+        catch(e) {} 
         this.currentPage = parsedHash;
         this.currentView.showPage();
         this.header.dataset.location = this.currentView.friendlyName // Change display text.
@@ -37,3 +43,13 @@ export class Router {
 		);
 	}
 }
+
+function fetchPages(config: Record<string, string>) {
+    Object.keys(config).forEach(path => {
+        const file = config[path];
+        const target = document.querySelector<ISPAView>(`spa-view[path='${path}']`);
+        fetch(file).then(res => res.text()).then(text => {
+            target.innerHTML = text;
+        });
+    })
+} 
