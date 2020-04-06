@@ -23,8 +23,22 @@ const Style = (`
 //#endregion
 
 //#region Logic:
+const mobileMediaQuery = matchMedia("(max-width: 550px)");
+
 export class SideBar extends HTMLElement {
     connectedCallback() {
+        mobileMediaQuery.addEventListener("change", (({ matches }) => {
+            if (matches) {
+                document.body.style.paddingLeft = "0";
+                this.hidden = true;
+                this.style.display = "none";
+            } else {
+                document.body.style.paddingLeft = "4rem";
+                this.hidden = false;
+                this.style.display = "flex";
+            }
+        }).bind(this));
+
         render(<Markup />, this);
     }
 

@@ -1,4 +1,4 @@
-const onlyPageName = matchMedia("(max-width: 475px)");
+const onlyPageName = matchMedia("(max-width: 550px)");
 
 export class MainHeading extends HTMLElement {
     static get observedAttributes() { return ["data-location"]; }

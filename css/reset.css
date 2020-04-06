@@ -189,6 +189,13 @@ header, section, footer, nav {
         font-size: 1.25rem;
     }
 
+    body {
+        padding-left: 0;
+    }
+}
+
+/* Change btwn mobile and default header */
+@media screen and (max-width: 550px) {
     header { 
         text-align: center;
     }
