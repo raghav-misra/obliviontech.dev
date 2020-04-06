@@ -127,6 +127,10 @@ button:hover, button:focus, .button:hover, .button:focus {
     margin: 0;
 }
 
+.color-close {
+    color: rgb(255, 45, 45);
+}
+
 header, section, footer, .padding {
     padding: 1rem;
 }
@@ -146,6 +150,13 @@ header, section, footer, nav {
 
 * {
     color: var(--text);
+}
+
+/* nothing */
+.nothing {
+    width: auto; height: auto;
+    border: none; padding: 0;
+    margin: 0;  
 }
 
 /* Text align */
@@ -192,7 +203,7 @@ header, section, footer, nav {
     body {
         padding-left: 0;
     }
-}
+
 
 /* Change btwn mobile and default header */
 @media screen and (max-width: 550px) {

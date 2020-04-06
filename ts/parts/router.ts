@@ -19,6 +19,11 @@ export class Router {
 		if (parsedHash.trim() == "") parsedHash = "/";
 		console.log(parsedHash);
 
+        // Change tabs:
+        TabLink.unhighlightAll();
+        try { TabLink.highlight(parsedHash); }
+        catch(e) {} 
+
         // Hide old page + show new page.
 		if (this.currentPage) 
 			this.currentView.hidePage((() => this.showPage(parsedHash)).bind(this));
@@ -28,9 +33,6 @@ export class Router {
     }
     
     showPage(parsedHash) {
-        TabLink.unhighlightAll();
-        try { TabLink.highlight(parsedHash); }
-        catch(e) {} 
         this.currentPage = parsedHash;
         this.currentView.showPage();
         this.header.dataset.location = this.currentView.friendlyName // Change display text.

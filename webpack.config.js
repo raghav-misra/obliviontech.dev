@@ -1,4 +1,3 @@
-const path = require('path');
 module.exports = {
     entry: './ts/app.ts',
     devtool: 'source-map',

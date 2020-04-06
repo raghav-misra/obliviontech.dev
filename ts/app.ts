@@ -10,6 +10,9 @@ const nav = document.querySelector<SideBar>("[is='side-bar']");
 import { TabLink } from './components/tab-link';
 TabLink.define();
 
+import { MobileMenu } from './components/mobile-menu';
+MobileMenu.define();
+
 import { SPAView } from './components/spa-view';
 SPAView.define();
 
