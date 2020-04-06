@@ -2,7 +2,14 @@ import { h, render, Fragment, addComponentStyles } from '../parts/jsx';
 
 //#region Markup
 const links = ["home", "about", "projects", "contact"];
-const Markup = () => <Fragment>{ links.map((name) => <tab-link to={name}></tab-link>) }</Fragment>;
+const Markup = () => (
+    <Fragment>
+        { links.map((name) => <tab-link to={name}></tab-link>) }
+        <tab-link no-flex manual to="https://github.com/raghav-misra/obliviontech.dev">
+            <i class="h4 fab fa-github padding fa-rotate-90"></i>
+        </tab-link> 
+    </Fragment>
+);
 //#endregion
 
 //#region Style:

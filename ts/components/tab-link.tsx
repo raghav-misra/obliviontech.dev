@@ -3,7 +3,6 @@ import { addComponentStyles } from '../parts/jsx';
 //#region Style:
 const Style = (`
     tab-link {
-        flex: 1;
         text-align: center;
         display: flex;
         font-size: 1.75rem;
@@ -12,6 +11,10 @@ const Style = (`
         justify-content: center;
         text-decoration: none;
         cursor: pointer;
+    }
+
+    tab-link:not([no-flex]) {
+        flex: 1;
     }
 
     tab-link.mobile {
