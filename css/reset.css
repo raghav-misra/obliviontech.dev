@@ -69,7 +69,7 @@ h6, .h6, .lead {
     font-size: 1.25rem;
 }
 
-small { 
+small, .text-small { 
     font-size: 0.75rem;
 }
 
@@ -214,16 +214,12 @@ header, section, footer, nav {
 }
 
 @media screen and (max-width: 475px) {
-    html {
-        font-size: 14px;
-    }
-
     .hero:not(.giant) {
         font-size: 1.75rem;
     }
 
     .hero.giant {
-        font-size: 4rem;
+        font-size: 3rem;
     }
 
     tab-link {

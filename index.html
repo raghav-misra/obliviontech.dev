@@ -16,10 +16,13 @@
 <body class="d-flex flex-direction-column">
     <!-- Router Fetch Config -->
     <view-config hidden>{
-        "/": "/pages/home.html",
-        "/about": "pages/about.html",
-        "/projects": "pages/projects.html",
-        "/contact": "pages/contact.html"
+        "pageRoot": "#pages",
+        "pathMap": {
+            "/": "/pages/home.html",
+            "/about": "pages/about.html",
+            "/projects": "pages/projects.html",
+            "/contact": "pages/contact.html"
+        }
     }</view-config>
 
     <!-- Tab bar -->

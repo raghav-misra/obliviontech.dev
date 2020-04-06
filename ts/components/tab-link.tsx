@@ -30,9 +30,13 @@ export class TabLink extends HTMLElement {
 
     connectedCallback() {
         this.addEventListener("click", this.whenClicked);
-        this.innerText = this.getAttribute("to");
-        this.targetURL = this.getAttribute("to") == "home" ? 
-            "#" : `#/${this.getAttribute("to")}`;
+        if (this.hasAttribute("manual")) {
+            this.targetURL = this.getAttribute("to");
+        } else {
+            this.innerText = this.getAttribute("to");
+            this.targetURL = this.getAttribute("to") == "home" ? 
+                "#" : `#/${this.getAttribute("to")}`;
+        }
     }
 
     toggle() {
