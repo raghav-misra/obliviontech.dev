@@ -26,7 +26,8 @@ const Style = (`
 const mobileMediaQuery = matchMedia("(max-width: 550px)");
 
 export class SideBar extends HTMLElement {
-    connectedCallback() {
+    constructor() {
+        super();
         mobileMediaQuery.addEventListener("change", (({ matches }) => {
             if (matches) {
                 document.body.style.paddingLeft = "0";

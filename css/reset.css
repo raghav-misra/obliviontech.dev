@@ -3,6 +3,7 @@
     --background: #313540ff;
     --background-accent: #191b21ff;
     --text: white;
+    --danger: rgb(255, 45, 45);
     --accent: cornflowerblue;
 }
 
@@ -89,6 +90,10 @@ code, kbd {
     display: flex;
 }
 
+.d-none {
+    display: none;
+}
+
 .flex-1 {
     flex: 1;
 }
@@ -128,7 +133,32 @@ button:hover, button:focus, .button:hover, .button:focus {
 }
 
 .color-close {
-    color: rgb(255, 45, 45);
+    color: var(--danger);
+}
+
+.circle-btn {
+    padding: 0.25rem 0.625rem;
+    border-radius: 50% !important;
+}
+
+.close-btn:hover, .close-btn:focus {
+    background: var(--text);
+}
+
+.color-accent{
+    color: var(--accent);
+}
+
+.color-defo {
+    color: var(--text);
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
 }
 
 header, section, footer, .padding {
@@ -209,5 +239,9 @@ header, section, footer, nav {
 @media screen and (max-width: 550px) {
     header { 
         text-align: center;
+    }
+
+    #openMenu, .mobile-only {
+        display: initial;
     }
 }
