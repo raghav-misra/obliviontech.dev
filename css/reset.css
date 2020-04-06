@@ -203,7 +203,7 @@ header, section, footer, nav {
     body {
         padding-left: 0;
     }
-
+}
 
 /* Change btwn mobile and default header */
 @media screen and (max-width: 550px) {
