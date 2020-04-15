@@ -5,7 +5,7 @@ const Style = (`
     tab-link {
         text-align: center;
         display: flex;
-        font-size: 1.75rem;
+        font-size: 1.5rem;
         align-items: center;
         transition: background 0.25s ease-in-out, color 0.25s ease-in-out;
         justify-content: center;

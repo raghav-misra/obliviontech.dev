@@ -222,10 +222,6 @@ header, section, footer, nav {
         font-size: 3rem;
     }
 
-    tab-link {
-        font-size: 1.25rem;
-    }
-
     body {
         padding-left: 0;
     }
@@ -239,5 +235,11 @@ header, section, footer, nav {
 
     #openMenu, .mobile-only {
         display: initial;
+    }
+}
+
+@media screen and (max-height: 550px) {
+    tab-link {
+        font-size: 1.25rem !important;
     }
 }
