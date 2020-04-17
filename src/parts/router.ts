@@ -47,13 +47,14 @@ export class Router {
     }
 }
 
-function fetchPages({ pathMap }: IRouterConfig) {
+function fetchPages({ pathMap, pageRoot }: IRouterConfig) {
+    const root = document.querySelector(pageRoot);
     // Fetch pages:
     Object.keys(pathMap).forEach(path => {
         const file = pathMap[path];
-        const target = document.querySelector(`spa-view[path="${path}"]`);
+        const target = root.querySelector(`spa-view[path="${path}"]`);
         fetch(file).then(res => res.text()).then(text => {
             target.innerHTML = text;
         });
     });
-}
+}   
