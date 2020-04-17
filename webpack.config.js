@@ -1,5 +1,5 @@
 module.exports = {
-    entry: './ts/app.ts',
+    entry: './src/app.ts',
     devtool: 'source-map',
     module: {
         rules: [
@@ -15,6 +15,6 @@ module.exports = {
     },
     output: {
         filename: 'app.js',
-        path: __dirname + "/js"
+        path: __dirname + "/dist"
     }
 };
