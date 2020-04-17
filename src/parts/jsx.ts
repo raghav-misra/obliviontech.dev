@@ -19,6 +19,7 @@ export function h(tagName: string | Function, props: object, ...children: Accept
 
     // Add all properties to the new element.
     Object.keys(props).forEach((name) => {
+        /*eslint no-prototype-builtins: "off"*/
         if (props.hasOwnProperty(name)) setProperty(element, name, props[name]);
     });
 

@@ -3,13 +3,13 @@
         "target": "ES5",
         "module": "ES6",
         "allowUmdGlobalAccess": true,
-        "outDir": "./js/",
+        "outDir": "./dist/",
         "lib": ["ES5", "ES2015.Core", "DOM"],
         "jsx": "react",
         "jsxFactory": "h",
         "sourceMap": true,
         "watch": true,
     },
-    "include": ["./ts/", "types.d.ts"],
+    "include": ["./src/", "types.d.ts"],
     "exclude": ["node_modules"]
 }

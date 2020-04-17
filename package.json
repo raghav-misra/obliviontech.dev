@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/raghav-misra/obliviontech.dev#readme",
   "devDependencies": {
+    "@webcomponents/webcomponentsjs": "^2.4.3",
     "ts-loader": "^6.2.2",
     "typescript": "^3.8.3",
     "webpack": "^4.42.1",

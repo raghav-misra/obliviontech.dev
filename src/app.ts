@@ -1,22 +1,25 @@
 // Initialize Components:
-import { TabLink } from './components/tab-link';
-TabLink.define();
+import { TabLink } from "./components/tab-link";
+import { MainHeading } from "./components/main-heading";
+import { SideBar } from "./components/side-bar";
+import { MobileMenu } from "./components/mobile-menu";
+import { SPAView } from "./components/spa-view";
+import { Router } from "./parts/router";
 
-import { MainHeading } from './components/main-heading';
-MainHeading.define();
-const header = document.querySelector("[is=main-heading]") as MainHeading;
+// Define Components on polyfill load
+window.WebComponents.waitFor(() => {
+    SideBar.define();
+    SPAView.define();
+    MobileMenu.define();
+    MainHeading.define();
+    TabLink.define();
 
-import { SideBar } from './components/side-bar';
-SideBar.define();
+    const header = document.querySelector("[is=main-heading]") as MainHeading;
 
-import { MobileMenu } from './components/mobile-menu';
-MobileMenu.define();
-const mobileMenu: MobileMenu = document.querySelector("nav[is=mobile-menu]");
-mobileMenu.bindToButton("#openMenu");
+    const mobileMenu: MobileMenu = document.querySelector("nav[is=mobile-menu]");
+    mobileMenu.bindToButton("#openMenu");
 
-import { SPAView } from './components/spa-view';
-SPAView.define();
+    // Do Router (after components load):
+    new Router(header);
+});
 
-// Do Router (after components load):
-import { Router } from './parts/router';
-new Router(header);

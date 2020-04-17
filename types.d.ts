@@ -8,3 +8,9 @@ interface IRouterConfig {
     pageRoot: string;
     pathMap: Record<string, string>;
 }
+
+interface Window {
+    WebComponents: { 
+        waitFor(callback: Function); 
+    };
+}

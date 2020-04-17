@@ -1,4 +1,4 @@
-import { h, render, Fragment, addComponentStyles } from '../parts/jsx';
+import { h, render, Fragment } from '../parts/jsx';
 
 const onlyPageName = matchMedia("(max-width: 550px)");
 
