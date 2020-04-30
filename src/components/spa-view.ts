@@ -5,6 +5,7 @@ const Style = (`
 	spa-view {
         display: none;
         text-align: center;
+        margin-top: 2rem;
 	}
 `);
 //#endregion
