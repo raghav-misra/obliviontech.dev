@@ -1,0 +1,57 @@
+/* Buttons */
+button,
+.button {
+    text-decoration: none;
+    padding: 0.25rem 1rem;
+    margin: 0.5rem;
+    font-size: 1.25rem;
+    background: none;
+    color: var(--color);
+    border: 1px solid var(--text);
+    transition: background 0.25s ease-in-out;
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+    background: var(--accent);
+}
+
+.circle-btn {
+    padding: 0.25rem 0.625rem;
+    border-radius: 50% !important;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    background: var(--text);
+}
+
+/* Inputs */
+.input-group {
+    display: inline-block;
+    margin: 1rem;
+    vertical-align: top;
+}
+
+input, option, select, textarea {
+    color: var(--text);
+    background: var(--background-accent);
+    border: var(--background-accent) solid 0.125rem;
+    padding: 0.5rem;
+}
+
+.kwes-form { max-width: 50vw; }
+
+.kwes-form small { max-width: 0 !important; overflow: hidden; }
+
+label {
+    font-size: 1.25rem;
+    margin: 1rem 0;
+}
+
+/* Pages group */
+#pages {
+    
+}

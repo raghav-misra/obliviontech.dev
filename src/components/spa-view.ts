@@ -3,10 +3,8 @@ import * as JSX from '../parts/jsx';
 //#region Style
 const Style = (`
 	spa-view {
-        flex: 1;
         display: none;
-        align-items: center;
-        justify-content: center;
+        text-align: center;
 	}
 `);
 //#endregion
@@ -16,7 +14,7 @@ const events = {
     whenShown: new Event("whenShown"),
     whenHidden: new Event("whenHidden"),
     whenConnected: new Event("whenConnected")
-}
+};
 export class SPAView extends HTMLElement implements ISPAView {
     get friendlyName() {
         if (this.getAttribute("path") == "/") return "home";
@@ -30,7 +28,7 @@ export class SPAView extends HTMLElement implements ISPAView {
 
     showPage(animationCallback = null) {
         this.hidden = false;
-        this.style.display = this.dataset.display || "flex";
+        this.style.display = this.dataset.display || "block";
         this.dispatchEvent(events.whenShown);
         this.style.animation = "fade-in 0.5s ease-in";
         this.style.animationFillMode = "both";
@@ -44,6 +42,10 @@ export class SPAView extends HTMLElement implements ISPAView {
             this.hidden = true;
             this.dispatchEvent(events.whenHidden);
             this.style.display = "none";
+            document.querySelectorAll("spa-view").forEach(( el: HTMLElement) => {
+                el.hidden = true;
+                el.style.display = "none";
+            })
             animationCallback();
         }).bind(this), 450);
     }

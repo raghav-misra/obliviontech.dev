@@ -19,7 +19,6 @@ body {
 * {
     font-size: 1rem;
     font-family: "IBM Plex Sans";
-    overflow: hidden;
 }
 
 * {
@@ -110,22 +109,6 @@ code, kbd {
     justify-content: center;
 }
 
-/* Buttons and clicky things */
-button, .button {
-    text-decoration: none;
-    padding: 0.25rem 1rem;
-    margin: 0.5rem;
-    font-size: 1.25rem;
-    background: none;
-    color: var(--color);
-    border: 1px solid var(--text);
-    transition: background 0.25s ease-in-out;
-}
-
-button:hover, button:focus, .button:hover, .button:focus {
-    background: var(--accent);
-}
-
 /* Padding/Margin */
 * {
     padding: 0;
@@ -134,15 +117,6 @@ button:hover, button:focus, .button:hover, .button:focus {
 
 .color-close {
     color: var(--danger);
-}
-
-.circle-btn {
-    padding: 0.25rem 0.625rem;
-    border-radius: 50% !important;
-}
-
-.close-btn:hover, .close-btn:focus {
-    background: var(--text);
 }
 
 .color-accent{
@@ -163,10 +137,6 @@ button:hover, button:focus, .button:hover, .button:focus {
 
 header, section, footer, .padding {
     padding: 1rem;
-}
-
-spa-view {
-    padding: 1.5rem;
 }
 
 /* Colors */
