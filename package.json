@@ -1,26 +1,25 @@
 {
-  "name": "obliviontech.dev",
-  "version": "0.0.1",
-  "description": "The portfolio website for: raghav-misra & LehuyH.",
-  "scripts": {
-    "build": "webpack",
-    "watch": "webpack --watch"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/raghav-misra/obliviontech.dev.git"
-  },
-  "author": "raghav-misra",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/raghav-misra/obliviontech.dev/issues"
-  },
-  "homepage": "https://github.com/raghav-misra/obliviontech.dev#readme",
-  "devDependencies": {
-    "@webcomponents/webcomponentsjs": "^2.4.3",
-    "ts-loader": "^6.2.2",
-    "typescript": "^3.8.3",
-    "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11"
-  }
+    "name": "obliviontech.dev",
+    "version": "0.0.1",
+    "description": "The portfolio website for: raghav-misra & LehuyH.",
+    "scripts": {
+        "build": "webpack",
+        "watch": "webpack --watch"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/raghav-misra/obliviontech.dev.git"
+    },
+    "author": "raghav-misra",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/raghav-misra/obliviontech.dev/issues"
+    },
+    "homepage": "https://github.com/raghav-misra/obliviontech.dev#readme",
+    "devDependencies": {
+        "ts-loader": "^6.2.2",
+        "typescript": "^3.8.3",
+        "webpack": "^4.42.1",
+        "webpack-cli": "^3.3.11"
+    }
 }

@@ -4,7 +4,7 @@ import { MainHeading } from "./components/main-heading";
 import { SideBar } from "./components/side-bar";
 import { MobileMenu } from "./components/mobile-menu";
 import { SPAView } from "./components/spa-view";
-import { ProjectCard } from "./components/project-card";    
+import { ProjectCard } from "./components/project-card";
 
 import { Router } from "./parts/router";
 
