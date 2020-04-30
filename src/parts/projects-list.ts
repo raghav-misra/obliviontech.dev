@@ -15,5 +15,11 @@ export default [
         name: "Medical.ly",
         description: "Medical.ly is a EHR replacement designed to bridge the gap between patients and doctors through and with a simple, friendly online interface.",
         repo: "https://github.com/raghav-misra/medical.ly"
+    }, 
+    {
+        name: "Fortify",
+        description: "Fortify is an app designed to help you stay safe and stay engaged during the COVID-19 quarantine. It won 1st place in the Repl.It Code Jam #9.",
+        link: "https://codejamentry.raghavm.repl.co",
+        repo: "https://github.com/raghav-misra/Fortify"
     }
 ] as IProjectData[];
