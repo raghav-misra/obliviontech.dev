@@ -4,11 +4,11 @@ export class Router {
     header: HTMLElement;
     currentPage: string = null;
 
-    constructor(header: HTMLElement) {
+    constructor(header: HTMLElement, config: IRouterConfig) {
         this.header = header;
         window.addEventListener("hashchange", this.onRedirect.bind(this));
         this.onRedirect();
-        fetchPages(JSON.parse(document.querySelector("view-config").textContent));
+        fetchPages(config);
     }
 
     onRedirect() {
@@ -51,10 +51,9 @@ function fetchPages({ pathMap, pageRoot }: IRouterConfig) {
     const root = document.querySelector(pageRoot);
     // Fetch pages:
     Object.keys(pathMap).forEach(path => {
-        const file = pathMap[path];
-        const target = root.querySelector(`spa-view[path="${path}"]`);
-        fetch(file).then(res => res.text()).then(text => {
-            target.innerHTML = text;
-        });
+        const node = pathMap[path];
+        const target: HTMLElement = root.querySelector(`spa-view[path="${path}"]`);
+        target.innerText = "";
+        target.appendChild(node);
     });
 }   
