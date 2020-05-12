@@ -1,6 +1,13 @@
 /* Fade in page onload */
 body { animation: fade-in 1s ease-in; }
 
+/* HR OMG */
+hr {
+    margin: 0.75rem;
+    border: none;
+    border-top: 2px var(--text) solid;
+}
+
 /* Buttons */
 button,
 .button {

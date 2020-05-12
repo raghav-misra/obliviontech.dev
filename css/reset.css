@@ -72,8 +72,8 @@ small, .text-small {
     font-size: 0.75rem;
 }
 
-code, kbd {
-    font-family: "IBM Plex Mono";
+code, kbd, .mono {
+    font-family: "IBM Plex Mono", monospace;
 }
 
 /* Flexibility & Display */
