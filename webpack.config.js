@@ -4,7 +4,8 @@ module.exports = {
     devServer: {
         contentBase: __dirname,
         compress: true,
-        port: 6969
+        port: 6969,
+        writeToDisk: true
     },
     module: {
         rules: [

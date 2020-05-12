@@ -4,21 +4,19 @@ import Typed from "typed.js";
 const Page = (
     <Fragment>
         <div class="homepage-image-layer">
-            <img class="cloud-code" src="/assets/graphics/cloud-code.png" />
+            xd
         </div>
 
         <style>{`
             .typed-cursor { display: none; }
 
-            .homepage-image-layer {
+            .homepage-image-layer {   
                 position: absolute;
                 z-index: -1;
                 top: 0; left: 0;
                 right: 0;
                 bottom: 0;
             } 
-
-            .cloud-code { width: 25rem; }
         `}</style>
     </Fragment>
 );

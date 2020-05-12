@@ -5,7 +5,7 @@
     "scripts": {
         "build": "webpack",
         "watch": "webpack --watch",
-        "serve": "webpack-dev-server"
+        "serve": "webpack-dev-server --watch-poll"
     },
     "repository": {
         "type": "git",
