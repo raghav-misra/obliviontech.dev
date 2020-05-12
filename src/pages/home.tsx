@@ -4,7 +4,7 @@ import Typed from "typed.js";
 const Page = (
     <Fragment>
         <div class="homepage-image-layer">
-            xd
+            <img class="img-circuit" src="/assets/graphics/branding-circuit.png" />
         </div>
 
         <style>{`
@@ -14,9 +14,17 @@ const Page = (
                 position: absolute;
                 z-index: -1;
                 top: 0; left: 0;
+                height: calc(100vh - 6.625rem);
                 right: 0;
                 bottom: 0;
             } 
+
+            .homepage-image-layer img { position: absolute; }
+
+            .homepage-image-layer .img-circuit{
+                left: 0; bottom: 0;
+                width: 35rem;
+            }
         `}</style>
     </Fragment>
 );

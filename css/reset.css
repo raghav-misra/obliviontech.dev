@@ -17,6 +17,7 @@ body {
 }
 
 * {
+    overflow-x: visible;
     font-size: 1rem;
     font-family: "IBM Plex Sans";
 }
