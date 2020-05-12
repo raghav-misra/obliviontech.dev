@@ -13,6 +13,7 @@ import HomePage from "./pages/home";
 import AboutPage from "./pages/about";
 import ProjectsPage from "./pages/projects";
 import ContactsPage from "./pages/contact";
+import NotFoundPage from "./pages/404";
 
 // Define Components on polyfill load
 window.WebComponents.waitFor(() => {
@@ -35,7 +36,8 @@ window.WebComponents.waitFor(() => {
             "/": HomePage,
             "/about": AboutPage,
             "/projects": ProjectsPage,
-            "/contact": ContactsPage
+            "/contact": ContactsPage,
+            "404": NotFoundPage
         }
     });
 });

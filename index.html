@@ -26,29 +26,12 @@
 
     <!-- SPA routing container -->
     <div id="pages">
-        <!-- Dynamically filled pages -->
+        <!-- Dynamically filled views -->
         <spa-view path="/"></spa-view>
         <spa-view path="/about"></spa-view>
         <spa-view path="/projects"></spa-view>
         <spa-view path="/contact"></spa-view>
-
-        <!-- 404 page -->
-        <spa-view path="404" hidden>
-            <div class="text-center padding" style="max-width: 30rem">
-                <h1 class="hero giant">
-                    Shhhh! 
-                    <i class="fas fa-key hero" style="position: relative; bottom: 1rem;"></i>
-                </h1>
-                <hr><br>
-                <p class="lead">
-                    It appears, that you have somehow
-                    stumbled upon our secret headquarters.
-                    Forget you ever saw this page.
-                </p>
-                <br>
-                <a class="button" href="#">Go Home</a>
-            </div>
-        </spa-view>
+        <spa-view path="404"></spa-view>
     </div>
 
     <script defer src="./libs/custom-elements-es5-adapter.js"></script>
