@@ -1,8 +1,9 @@
 import { h, Fragment } from "../parts/jsx";
-import ProjectsList from "../parts/projects-list";
+import projectsList from "../parts/projects-list";
 
-export default <Fragment>
-    {
-        ProjectsList.map(project => <project-card data-project={JSON.stringify(project)}></project-card>)
-    }
-</Fragment>
+export default <Fragment>{
+    projectsList.map(project =>
+        <project-card data-project={JSON.stringify(project)}>
+        </project-card>
+    )
+}</Fragment>

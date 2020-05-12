@@ -1,3 +1,6 @@
+/* Fade in page onload */
+body { animation: fade-in 1s ease-in; }
+
 /* Buttons */
 button,
 .button {
@@ -20,11 +23,11 @@ button:focus,
 
 .circle-btn {
     padding: 0.25rem 0.625rem;
-    border-radius: 50% !important;
+    border-radius: 50%;
 }
 
-.close-btn:hover,
-.close-btn:focus {
+.circle-btn:hover,
+.circle-btn:focus {
     background: var(--text);
 }
 
@@ -36,22 +39,26 @@ button:focus,
 }
 
 input, option, select, textarea {
+    margin-top: 0.5rem;
     color: var(--text);
     background: var(--background-accent);
     border: var(--background-accent) solid 0.125rem;
     padding: 0.5rem;
 }
 
-.kwes-form { max-width: 50vw; }
+input {
+    width: 12.5rem;
+}
 
-.kwes-form small { max-width: 0 !important; overflow: hidden; }
+select {
+    width: 13.75rem;
+}
+
+textarea {
+    width: 12.5rem;
+}
 
 label {
     font-size: 1.25rem;
     margin: 1rem 0;
-}
-
-/* Pages group */
-#pages {
-    
 }

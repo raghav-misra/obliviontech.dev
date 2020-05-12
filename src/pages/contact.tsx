@@ -71,16 +71,22 @@ export default (
                 </div>
             </form>
         </div>
-        <style>{`
-        [class*="kw-message-"], [class*="kw-message-"] * {
-            color: var(--background) !important;
-            font-family: "IBM Plex Mono", monospace;
-            font-weight: bold;
-        } 
+        <style data-desc="Override all default form styles that are ugly.">{`
+            [class*="kw-message-"], [class*="kw-message-"] * {
+                color: var(--background) !important;
+                font-family: "IBM Plex Mono", monospace;
+                font-weight: bold;
+                display: inline-block;
+            } 
 
-        [class*="kw-message-"] {
-            margin: 1rem 0;
-        }
+            [class*="kw-message-"] {
+                text-align: center;
+                margin: 1rem 0;
+                display: inline-block !important;
+                max-width: 15rem;
+            }
+
+            .kwes-form small { max-width: 0 !important; overflow: hidden; }
     `}</style>
     </div>
 );
