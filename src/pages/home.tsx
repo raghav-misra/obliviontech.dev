@@ -1,17 +1,31 @@
 import { h, Fragment } from "../parts/jsx";
 import Typed from "typed.js";
 
-const Page = <Fragment>
-    <hr />
-    <h3 id="serviceCycler" class="mono"></h3>
-    <hr />
-    <style>{`
-        .typed-cursor { display: none; }
-    `}</style>
-</Fragment>;
+const Page = (
+    <Fragment>
+        <div class="homepage-image-layer">
+            <img class="cloud-code" src="/assets/graphics/cloud-code.png" />
+        </div>
+
+        <style>{`
+            .typed-cursor { display: none; }
+
+            .homepage-image-layer {
+                position: absolute;
+                z-index: -1;
+                top: 0; left: 0;
+                right: 0;
+                bottom: 0;
+            } 
+
+            .cloud-code { width: 25rem; }
+        `}</style>
+    </Fragment>
+);
 
 export default Page;
 
+/*
 const showSkills = new Typed(Page.querySelector("#serviceCycler"), {
     strings: [
         "full-stack web apps",
@@ -25,4 +39,5 @@ const showSkills = new Typed(Page.querySelector("#serviceCycler"), {
     
     startDelay: 500,
     backDelay: 500
-});
+}); 
+*/
