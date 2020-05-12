@@ -16,6 +16,7 @@ export default (
                         id="firstNameInput"
                         placeholder="Type here..."
                         name="First Name"
+                        rules="required|alpha"
                     ></input>
                 </div>
 
@@ -27,6 +28,7 @@ export default (
                         id="lastNameInput"
                         placeholder="Type here..."
                         name="Last Name"
+                        rules="required|alpha"
                     ></input>
                 </div>
 
@@ -40,13 +42,14 @@ export default (
                         id="emailInput"
                         placeholder="Type here..."
                         name="Email"
+                        rules="required|email"
                     ></input>
                 </div>
 
                 <div class="input-group">
                     <label for="#subjectInput">Subject:</label>
                     <br />
-                    <select id="subjectInput" name="Subject">
+                    <select id="subjectInput" name="Subject" rules="required">
                         <option value="Say Hi!">Say Hi!</option>
                         <option value="Ask a Question.">Ask a Question.</option>
                         <option value="Other.">Other.</option>
@@ -62,6 +65,7 @@ export default (
                         id="messageInput"
                         placeholder="Type here..."
                         name="Body"
+                        rules="required"
                     ></textarea>
                 </div>
 
@@ -76,12 +80,12 @@ export default (
                 color: var(--background) !important;
                 font-family: "IBM Plex Mono", monospace;
                 font-weight: bold;
-                display: inline-block;
             } 
 
             [class*="kw-message-"] {
                 text-align: center;
                 margin: 1rem 0;
+                vertical-align: top;
                 display: inline-block !important;
                 max-width: 15rem;
             }
