@@ -1,6 +1,11 @@
 module.exports = {
     entry: './src/app.ts',
     devtool: 'source-map',
+    devServer: {
+        contentBase: __dirname,
+        compress: true,
+        port: 6969
+    },
     module: {
         rules: [
             {

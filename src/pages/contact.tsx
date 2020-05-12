@@ -76,6 +76,12 @@ export default (
             </form>
         </div>
         <style data-desc="Override all default form styles that are ugly.">{`
+            .kw-form-wrapper {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+            }
+
             [class*="kw-message-"], [class*="kw-message-"] * {
                 color: var(--background) !important;
                 font-family: "IBM Plex Mono", monospace;

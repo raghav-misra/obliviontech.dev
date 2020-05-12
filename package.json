@@ -4,7 +4,8 @@
     "description": "The portfolio website for: raghav-misra & LehuyH.",
     "scripts": {
         "build": "webpack",
-        "watch": "webpack --watch"
+        "watch": "webpack --watch",
+        "serve": "webpack-dev-server"
     },
     "repository": {
         "type": "git",
@@ -20,7 +21,8 @@
         "ts-loader": "^6.2.2",
         "typescript": "^3.8.3",
         "webpack": "^4.42.1",
-        "webpack-cli": "^3.3.11"
+        "webpack-cli": "^3.3.11",
+        "webpack-dev-server": "^3.11.0"
     },
     "dependencies": {
         "typed.js": "^2.0.11"
